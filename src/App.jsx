@@ -21,6 +21,9 @@ import Dashboard1 from './Dashboard';
 import Profile from './Profile';
 import Settings from './Settings';
 import NotFound from './NotFound.jsx'
+import Users from './Posts.jsx'
+import {Axios, Axios1} from './Axios.jsx'
+import {PostsQuery, UsersQuery} from './TanStack.jsx'
 function App() {
 
   return (
@@ -71,6 +74,19 @@ function App() {
         {/* <ExpensiveComponent/> */}
         <Route path="/parent" element={<Parent />} />
         <Route path="/parent1" element={<Parent1 />} />
+        <Route path="/Users" element={<Users />} />
+        <Route path="/Axios" element={
+          <>
+          <Axios />
+          <Axios1 />
+          </>  
+        } />
+      <Route path="/PostsQuery" element={
+          <>
+            <PostsQuery />
+            <UsersQuery />
+          </>
+        } />
       </Routes>
     </BrowserRouter>
   )
