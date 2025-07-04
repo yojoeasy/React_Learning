@@ -20,6 +20,7 @@ import User from './User.jsx';
 import Dashboard1 from './Dashboard';
 import Profile from './Profile';
 import Settings from './Settings';
+import NotFound from './NotFound.jsx'
 function App() {
 
   return (
@@ -29,12 +30,12 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/user" element={<UserForm />} />
         <Route path="/user/:id" element={<User />} />
-         {/* Nested Dashboard Routes */}
-    <Route path="/dashboard" element={<Dashboard1 />}>
-      <Route path="profile" element={<Profile />} />
-      <Route path="settings" element={<Settings />} />
-    </Route>
-
+        {/* Nested Dashboard Routes */}
+        <Route path="/dashboard" element={<Dashboard1 />}>
+          <Route path="profile" element={<Profile />} />
+          <Route path="settings" element={<Settings />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
         {/* <ClickButton/>
         <InputBox/>
         <FormExample/> */}
